@@ -1,18 +1,23 @@
-# Observatório de Entropia — Projeto definitivo (estático)
+# Observatório do Discurso Jurídico — Site (GitHub Pages)
 
-## ✅ Como rodar (VS Code + Live Server)
-1. Descompacte o `.zip`
-2. Abra a **pasta do projeto** no VS Code (File > Open Folder)
-3. Clique com o botão direito em `index.html` > **Open with Live Server**
+Este repositório contém **apenas o site público** (frontend estático) do Observatório.
 
-> Se aparecer “listing directory /”, você abriu a pasta errada (acima do projeto).
+- **Site no ar:** https://marialiscardososc-star.github.io/pj.programaria.frontend.final/
+- **Repositório técnico (dados + código + metodologia):** https://github.com/marialiscardososc-star/observatorio-entropia-fisica-informacional
 
-## Estrutura
-- `index.html`
-- `css/style.css`
-- `js/audio-synthesis.js` (leitura por seção com Web Speech API)
-- `js/form.js` (formulário simples: valida e loga no console)
+## O que você encontra aqui
+- `index.html`: página principal (divulgação científica)
+- `css/`, `js/`, `assets/`: estilos, scripts e recursos visuais
 
-## Observações
-- O formulário é apenas front-end (não envia para backend).
-- O TTS depende do suporte do navegador à Web Speech API.
+## Onde estão os dados, métricas e reprodutibilidade?
+No repositório técnico do Observatório:
+https://github.com/marialiscardososc-star/observatorio-entropia-fisica-informacional
+
+Lá ficam os datasets, scripts de análise (entropia/PMI e comparativos pré vs pós-CNJ), tabelas e figuras reproduzíveis.
+
+## Como publicar/atualizar o site
+1. Atualize os arquivos deste repositório (commit + push).
+2. O GitHub Pages faz o deploy automaticamente (Settings → Pages).
+
+## Licença
+Defina a licença deste repositório (código/artefatos do site).

@@ -551,85 +551,101 @@ footer p{
     justify-content: center;
   }
 }
-/* ==== Substack: identidade + vitrine ==== */
-.substack-header{
-  display: flex;
-  align-items: center;
-  gap: 16px;
+
+/* Estilos Adicionais para Métricas Avançadas e Estigma */
+.charts-grid {
+  margin: 2rem 0;
 }
 
-.substack-logo{
-  width: 84px;
-  height: 84px;
-  border-radius: 22px;
-  object-fit: cover;
-  flex-shrink: ;
-  border: 1px solid rgba(255,255,255,.25);
-  background: rgba(255,255,255,.10);
+.chart-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
 }
 
-.substack-text h3{
-  margin: 0;
+.chart-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: var(--highlight-yellow);
+  text-align: left;
 }
 
-.substack-desc{
-  margin: 10px 0 12px;
+.chart-desc {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  opacity: 0.8;
   line-height: 1.4;
-  opacity: .95;
+  text-align: left;
 }
 
-.substack-footnote{
-  margin-top: 10px;
-  opacity: .90;
+blockquote {
+  border-left: 4px solid var(--accent-pink);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 0 10px 10px 0;
 }
 
-/* Cards dos artigos */
-.artigos-lista{
-  list-style: none;
-  padding: 0;
-  margin: var(--s-4) 0 0;
+.titulo-verde { color: var(--highlight-green); }
+.titulo-vermelho { color: var(--highlight-red); }
+.titulo-amarelo { color: var(--highlight-yellow); }
 
-  display: flex;
-  gap: 16px;
+@media (max-width: 600px) {
+  .charts-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
-.artigo-card{
-  flex: 1;
+
+
+/* -------------------------------------------------
+   Observatório - Ecossistema (links rápidos)
+-------------------------------------------------- */
+.cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:14px;
+}
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.35);
+  color: rgba(255,255,255,.95);
+  background: rgba(0,0,0,.15);
+  text-decoration:none;
+  font-weight:600;
+}
+.btn-secondary:hover{
+  background: rgba(0,0,0,.22);
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:16px;
+}
+@media (max-width: 900px){
+  .grid-2{ grid-template-columns: 1fr; }
+}
+
+.card{
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
   padding: 16px;
-  border-radius: 12px;
-  background: rgba(255,255,255,.10);
-  border: 1px solid rgba(255,255,255,.18);
 }
+.card h3{ margin-top: 0; }
 
-.artigo-titulo{
-  display: block;
-  font-weight: 900;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
-.artigo-mini{
-  margin: 10px 0 12px;
-  line-height: 1.4;
-  opacity: .92;
-}
-
-.artigo-link{
-  display: inline-block;
-  font-weight: 800;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* Responsivo básico */
-@media (max-width: 800px){
-  .substack-header{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .artigos-lista{
-    flex-direction: column;
-  }
+.note{
+  margin-top: 12px;
+  opacity: .9;
+  font-size: .95rem;
 }

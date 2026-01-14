@@ -8,9 +8,11 @@
   <!-- Tipografia (opcional). Se estiver offline, o navegador usa a fonte do sistema. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/style.css" />
+  <!-- Chart.js para visualizações avançadas -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -21,6 +23,11 @@
       <div class="brand">
         <h1>Observatório de Entropia</h1>
         <p class="subtitle">A Ciência por Trás do Discurso no Sistema de Justiça</p>
+
+      <div class="cta">
+        <a class="btn-primary" href="https://github.com/marialiscardososc-star/observatorio-entropia-fisica-informacional" target="_blank" rel="noopener">Ver dados, código e metodologia (GitHub)</a>
+        <a class="btn-secondary" href="https://github.com/marialiscardososc-star/pj.programaria.frontend.final" target="_blank" rel="noopener">Repositório deste site</a>
+      </div>
       </div>
     </div>
   </header>
@@ -30,7 +37,10 @@
       <ul>
         <li><a href="#problema">O Problema</a></li>
         <li><a href="#lente">A Lente Analítica</a></li>
+        <li><a href="#ecossistema">Ecossistema</a></li>
         <li><a href="#evidencias">Evidências</a></li>
+        <li><a href="#metricas-avancadas">Métricas Avançadas</a></li>
+        <li><a href="#estigma">Construção do Estigma</a></li>
         <li><a href="#autora">A Autora</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -160,6 +170,27 @@
       </div>
     </section>
 
+    <section id="ecossistema" class="section">
+      <div class="container">
+        <h2>Como este Observatório está organizado</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>1) Site (divulgação científica)</h3>
+            <p>Esta página apresenta o problema, o método em linguagem acessível e as visualizações principais. É a porta de entrada para qualquer pessoa.</p>
+            <p><a href="https://marialiscardososc-star.github.io/pj.programaria.frontend.final/" target="_blank" rel="noopener">Abrir o site</a> · <a href="https://github.com/marialiscardososc-star/pj.programaria.frontend.final" target="_blank" rel="noopener">Ver repositório</a></p>
+          </div>
+          <div class="card">
+            <h3>2) Núcleo técnico (dados + código)</h3>
+            <p>No repositório técnico ficam os datasets, scripts de análise (entropia/PMI e comparativos pré vs pós-CNJ) e instruções para reproduzir os resultados.</p>
+            <p><a href="https://github.com/marialiscardososc-star/observatorio-entropia-fisica-informacional" target="_blank" rel="noopener">Acessar dados, código e metodologia</a></p>
+          </div>
+        </div>
+        <p class="note">Objetivo: permitir que qualquer pessoa entenda o diagnóstico pelo site — e que pesquisadores possam verificar e replicar pelo GitHub técnico.</p>
+      </div>
+    </section>
+
+
+
     <section id="evidencias" class="section">
       <div class="container">
         <header class="section-header">
@@ -219,18 +250,74 @@
       </div>
     </section>
 
+    <!-- SEÇÃO ADICIONADA: MÉTRICAS AVANÇADAS -->
+    <section id="metricas-avancadas" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="titulo-verde">Métricas Avançadas: Teoria da Informação Aplicada</h2>
+          <p class="section-lead">
+            Análise cronológica e espacial através das fórmulas H (Entropia), S (Informação), E (Equitabilidade) e PMI.
+          </p>
+        </header>
+
+        <div class="charts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 2rem;">
+          <div class="chart-box">
+            <h3>Variação Temporal de Entropia (H) - Maior Abertura</h3>
+            <canvas id="chartH1"></canvas>
+            <p class="chart-desc">Análise do tribunal com maior índice de aumento na entropia após o Marco do Protocolo CNJ (2021), demonstrando uma transição para a abertura vocabular.</p>
+          </div>
+          <div class="chart-box">
+            <h3>Cristalização Persistente - Menor Índice de Aumento</h3>
+            <canvas id="chartH2"></canvas>
+            <p class="chart-desc">Análise do tribunal com maior índice de diminuição ou manutenção de baixa entropia, onde padrões automáticos e atalhos cognitivos persistem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO ADICIONADA: CONSTRUÇÃO DO ESTIGMA -->
+    <section id="estigma" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="titulo-vermelho">A Construção Social do Estigma</h2>
+          <p class="section-lead">
+            Como a linguagem do Judiciário reifica a dignidade e produz estigmas diante de termos cristalizados.
+          </p>
+        </header>
+
+        <div class="charts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 2rem;">
+          <div class="chart-box">
+            <h3>Associações do Termo "Travestida" (PMI)</h3>
+            <canvas id="chartEstigma"></canvas>
+            <p class="chart-desc">Frequência e força de associação entre a identidade de gênero e conceitos de moralidade jurídica (simulação, ardil, má-fé).</p>
+          </div>
+          <div class="chart-box">
+            <h3>Valoração do Direito à Humanidade (Fórmula E)</h3>
+            <canvas id="chartMoral"></canvas>
+            <p class="chart-desc">Gráfico demonstrando a reificação da dignidade e o impacto das normativas progressistas na valoração humana ano a ano.</p>
+          </div>
+        </div>
+
+        <div class="tts-text" data-section="estigma-analise">
+          <blockquote>
+            "A moralidade jurídica constrói a imagem e determina a reificação da dignidade, fazendo a valoração do direito à humanidade através de frequências associativas estigmatizantes."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
     <section id="autora" class="section">
       <div class="container">
 
-        
-
         <div class="bio-autora">
           <img class="bio-photo" src="assets/foto-perfil.jpg" alt="Foto de Maria Lis Cardoso" loading="lazy" />
-          <h3 class="bio-title">Maria Lis Cardoso 🏳️‍⚧️</h3>
-          <p class="bio-tagline">
-            <strong>Traduzindo Lógica Humana em Código Funcional</strong> | Jurista Crítica &amp; Data Analyst em Transição |
-            Neurodivergente (TEA 1) &amp; PwD | Python/JS | Foco em Automação e Soluções Escaláveis
-          </p>
+          <div class="bio-content">
+            <h3 class="bio-title">Maria Lis Cardoso 🏳️‍⚧️</h3>
+            <p class="bio-tagline">
+              <strong>Traduzindo Lógica Humana em Código Funcional</strong> | Jurista Crítica &amp; Data Analyst em Transição |
+              Neurodivergente (TEA 1) &amp; PwD | Python/JS | Foco em Automação e Soluções Escaláveis
+            </p>
+          </div>
         </div>
 
         <!-- Player de Áudio -->
@@ -359,6 +446,7 @@
   </footer>
 
   <script src="./js/audio-synthesis.js"></script>
+  <script src="./js/data-viz.js"></script>
   <script src="./js/form.js"></script>
 </body>
 </html>
